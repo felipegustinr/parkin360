@@ -64,3 +64,21 @@ $color-main: #185678;
         box-shadow: 0 0 10px #00000042;
     }
 }
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    .icon{
+        color: $color-main;
+        font-size: 2rem;
+    }
+    .description{
+        .title{
+
+        }
+        .text{
+
+        }
+    }
+
+}
