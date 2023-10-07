@@ -29,4 +29,19 @@
   font-size: 0.75rem;
   padding: 0.1rem 1rem;
 }
+
+.main-menu li {
+  font-size: 0.75rem;
+  list-style: none;
+  display: inline;
+}
+
+.icon-sm i {
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  border-radius: 50%;
+  color: #185678;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2588235294);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2588235294);
+}
 /*# sourceMappingURL=style.css.map */
