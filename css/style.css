@@ -44,4 +44,18 @@
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2588235294);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2588235294);
 }
+
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.feature .icon {
+  color: #185678;
+  font-size: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
