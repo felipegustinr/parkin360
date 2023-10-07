@@ -48,5 +48,19 @@ $color-main: #185678;
 }
 
 .main-menu{
-    
+    li{
+        font-size: 0.75rem;
+        list-style: none;
+        display: inline;
+    }
+}
+
+.icon-sm {
+    i{
+        font-size: 0.75rem;
+        padding: 0.25rem;
+        border-radius: 50%;
+        color: $color-main ;
+        box-shadow: 0 0 10px #00000042;
+    }
 }
