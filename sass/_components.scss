@@ -68,13 +68,23 @@ $color-main: #185678;
 .feature {
     display: flex;
     flex-direction: column;
+    
     .icon{
         color: $color-main;
         font-size: 2rem;
+        
     }
     .description{
         .title{
-
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-around;
+            width: 150px;
+            position: absolute;
+            top: 4%;
+            color: $color-main;
+            
+            
         }
         .text{
 
