@@ -1,5 +1,32 @@
-.btn-main {
+.btn-main, .btn-main-s {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
   background-color: #185678;
   color: white;
+  border: none;
+  border: solid 1px #185678;
+}
+.btn-main:hover, .btn-main-s:hover {
+  background-color: white;
+  color: #185678;
+}
+.btn-main-s {
+  font-size: 0.75rem;
+  padding: 0.1rem 1rem;
+}
+
+.btn-sec, .btn-sec-s {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: black;
+  background-color: transparent;
+  border: none;
+}
+.btn-sec:hover, .btn-sec-s:hover {
+  color: #888;
+}
+.btn-sec-s {
+  font-size: 0.75rem;
+  padding: 0.1rem 1rem;
 }
 /*# sourceMappingURL=style.css.map */
