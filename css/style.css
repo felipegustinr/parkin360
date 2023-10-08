@@ -61,6 +61,10 @@
   font-size: 2rem;
 }
 .feature .description .title {
+  float: left;
+  width: 100%;
+  height: 0px;
+  padding-top: 10rem;
   font-size: 1rem;
   color: #185678;
 }
@@ -124,7 +128,7 @@ logo img {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 5rem;
+  height: 15rem;
 }
 
 .img-back {
