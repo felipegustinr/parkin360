@@ -90,3 +90,11 @@ $color-main: #185678;
     }
 
 }
+
+.login{
+    color:$color-main;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+}
