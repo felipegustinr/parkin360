@@ -60,14 +60,6 @@
 }
 .feature .description .title {
   font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 150px;
-  position: absolute;
-  top: 4%;
   color: #185678;
 }
 /*# sourceMappingURL=style.css.map */
