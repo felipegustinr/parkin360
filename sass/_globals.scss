@@ -15,9 +15,16 @@ logo img {
     float: right;
 }
 .login-page{
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 5rem;
+}
+.img-back {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height:auto;
 }
