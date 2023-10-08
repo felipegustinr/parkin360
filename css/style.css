@@ -31,9 +31,11 @@
 }
 
 .main-menu li {
-  font-size: 0.75rem;
   list-style: none;
   display: inline;
+}
+.main-menu li a {
+  text-decoration: none;
 }
 
 .icon-sm i {
