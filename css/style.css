@@ -138,6 +138,6 @@ logo img {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
-  height: auto;
+  height: px;
 }
 /*# sourceMappingURL=style.css.map */
