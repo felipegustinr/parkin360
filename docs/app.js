@@ -1,7 +1,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-import { } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+import { getFirestore, collection,addDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,82 +18,88 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-baseDatos = JSON.parse( window.localStorage.getItem("DB_users"));
+const db = getFirestore();
+
+export const saveUser= (email,password,confirmPass,direccion,ciudad,pais,zipcode) => 
+    addDoc(collection(db,'Usuarios'), {email:email,password:password,confirmPass:confirmPass,direccion:direccion,ciudad:ciudad,pais:pais,zipcode:zipcode});
 
 
-if (!baseDatos) {
-    cargarDatosDB()
-}
+// baseDatos = JSON.parse( window.localStorage.getItem("DB_users"));
 
-function guardarDatos(){
-    localStorage.setItem("DB_users", JSON.stringify(baseDatos))
-}
-function cargarDatosDB() {
-    baseDatos = {
-        "felipe_rivas@prueba.com": {
-            password: "felipe123"
-        },
+
+// if (!baseDatos) {
+//     cargarDatosDB()
+// }
+
+// function guardarDatos(){
+//     localStorage.setItem("DB_users", JSON.stringify(baseDatos))
+// }
+// function cargarDatosDB() {
+//     baseDatos = {
+//         "felipe_rivas@prueba.com": {
+//             password: "felipe123"
+//         },
         
-        "jorge_rivera@prueba.com": {
-            password: "jorge123"
-        },
+//         "jorge_rivera@prueba.com": {
+//             password: "jorge123"
+//         },
 
-        "diana_araujo@prueba.com": {
-            password :"diana123"
-        },
+//         "diana_araujo@prueba.com": {
+//             password :"diana123"
+//         },
 
-        "marleny_lopez@prueba.com": {
-            password: "marleny123"
-        },
+//         "marleny_lopez@prueba.com": {
+//             password: "marleny123"
+//         },
 
-        "daniel_jojoa@prueba.com": {
-            password: "daniel123"
-        },
+//         "daniel_jojoa@prueba.com": {
+//             password: "daniel123"
+//         },
         
-        "alejandra-zuleta@prueba.com": {
-            password: "alejandra123"
-        }
-    }
-}
+//         "alejandra-zuleta@prueba.com": {
+//             password: "alejandra123"
+//         }
+//     }
+// }
 
 
 
-function login() {  
-        let usuario = document.getElementById("email-login").value;
-        let password = document.getElementById("password-login").value;
+// function login() {  
+//         let usuario = document.getElementById("email-login").value;
+//         let password = document.getElementById("password-login").value;
 
-        if (!usuario) {
-            alert("Campo vacio en usuario");
-        }
-        if(!password){
-            alert("Campo vacio en contraseña");
-        }
-        let datos =  baseDatos[usuario]
-        if (!datos){
-            alert("El usuario no existe")
-        }
-        if (password != datos.password) {
-            alert("Contraseña incorrecta")
-        } else {
-            window.location="espacios.html"
-            alert("Bienvenido "+ usuario)
-        }
-    }
-    function registrer(){
-        let usuario = document.getElementById("email-reg").value;
-        let password = document.getElementById("password-reg").value;
+//         if (!usuario) {
+//             alert("Campo vacio en usuario");
+//         }
+//         if(!password){
+//             alert("Campo vacio en contraseña");
+//         }
+//         let datos =  baseDatos[usuario]
+//         if (!datos){
+//             alert("El usuario no existe")
+//         }
+//         if (password != datos.password) {
+//             alert("Contraseña incorrecta")
+//         } else {
+//             window.location="espacios.html"
+//             alert("Bienvenido "+ usuario)
+//         }
+//     }
+//     function registrer(){
+//         let usuario = document.getElementById("email-reg").value;
+//         let password = document.getElementById("password-reg").value;
         
-        if (!usuario) {
-            alert("Campo vacio en usuario");
-        }
-        if(!password){
-            alert("Campo vacio en contraseña");
-    }else{
-        baseDatos[usuario]={}
-        baseDatos[usuario].password=password
-        guardarDatos();
-        window.location="login.html"
-        alert("Usuario Registrado Correctamente")
-    } 
-}
+//         if (!usuario) {
+//             alert("Campo vacio en usuario");
+//         }
+//         if(!password){
+//             alert("Campo vacio en contraseña");
+//     }else{
+//         baseDatos[usuario]={}
+//         baseDatos[usuario].password=password
+//         guardarDatos();
+//         window.location="login.html"
+//         alert("Usuario Registrado Correctamente")
+//     } 
+// }
 
