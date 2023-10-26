@@ -21,7 +21,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "nodemon docs/"
+    "dev": "nodemon docs/src/"
   },
   "keywords": [],
   "author": "",
